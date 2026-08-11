@@ -47,7 +47,8 @@
 
   font-family: var(--font-display);
 
-  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-size:
+    clamp(3.5rem, 6vw, 6rem);
 
   font-weight: 500;
 
@@ -105,7 +106,7 @@
 
   grid-template-columns:
     60px
-    1fr
+    minmax(0, 1fr)
     40px;
 
   align-items: center;
@@ -138,11 +139,14 @@
 }
 
 .faq__question-text {
+  min-width: 0;
+
   color: var(--color-forest);
 
   font-family: var(--font-display);
 
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  font-size:
+    clamp(1.5rem, 2.5vw, 2.3rem);
 
   font-weight: 500;
 
@@ -161,7 +165,10 @@
   display: flex;
 
   align-items: center;
+
   justify-content: center;
+
+  flex-shrink: 0;
 
   border:
     1px solid
@@ -196,7 +203,8 @@
 
 .faq__item--open
 .faq__icon {
-  background: var(--color-forest);
+  background:
+    var(--color-forest);
 
   color: var(--color-gold);
 
@@ -214,7 +222,8 @@
   grid-template-rows: 0fr;
 
   transition:
-    grid-template-rows 0.45s
+    grid-template-rows
+    0.45s
     cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -305,7 +314,8 @@
 
   font-family: var(--font-display);
 
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-size:
+    clamp(1.7rem, 3vw, 2.5rem);
 
   font-weight: 500;
 
@@ -318,6 +328,8 @@
   align-items: center;
 
   gap: 12px;
+
+  flex-shrink: 0;
 
   color: var(--color-forest);
 
@@ -357,6 +369,8 @@
     grid-template-columns: 1fr;
 
     gap: 2rem;
+
+    margin-bottom: 4rem;
   }
 
   .faq__header .section-label {
@@ -368,6 +382,19 @@
   .faq__intro {
     max-width: 650px;
   }
+
+  .faq__question {
+    grid-template-columns:
+      50px
+      minmax(0, 1fr)
+      36px;
+
+    gap: 1rem;
+  }
+
+  .faq__answer p {
+    margin-left: 66px;
+  }
 }
 
 /* =========================================================
@@ -376,47 +403,110 @@
 
 @media (max-width: 600px) {
 
+  .faq__container {
+    width: 90%;
+  }
+
+  .faq__header {
+    gap: 1.5rem;
+
+    margin-bottom: 3rem;
+  }
+
   .faq__title {
     font-size:
       clamp(3rem, 14vw, 4.5rem);
+
+    line-height: 0.9;
   }
+
+  .faq__intro {
+    font-size: 0.9rem;
+
+    line-height: 1.75;
+  }
+
+  /* -------------------------
+     PREGUNTAS
+     ------------------------- */
 
   .faq__question {
     grid-template-columns:
-      35px
-      1fr
-      35px;
+      28px
+      minmax(0, 1fr)
+      32px;
 
     gap: 0.8rem;
 
-    padding: 1.5rem 0;
+    min-height: 76px;
+
+    padding:
+      1.25rem
+      0;
   }
 
   .faq__number {
-    font-size: 0.8rem;
+    align-self: start;
+
+    padding-top: 0.15rem;
+
+    font-size: 0.72rem;
   }
 
   .faq__question-text {
-    font-size: 1.35rem;
+    font-size:
+      clamp(1.2rem, 5.8vw, 1.45rem);
+
+    line-height: 1.2;
+
+    overflow-wrap: break-word;
   }
 
   .faq__icon {
     width: 29px;
     height: 29px;
 
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
-  .faq__answer p {
-    margin-left: 50px;
+  /*
+   * En móvil no cambiamos el color
+   * simplemente por tocar la pregunta.
+   */
 
-    font-size: 0.85rem;
+  .faq__question:hover
+  .faq__question-text {
+    color: var(--color-forest);
+  }
+
+  /* -------------------------
+     RESPUESTAS
+     ------------------------- */
+
+  .faq__answer p {
+    max-width: none;
+
+    margin:
+      0
+      0
+      0
+      36px;
+
+    padding-right: 0.25rem;
+
+    font-size: 0.84rem;
+
+    line-height: 1.75;
   }
 
   .faq__item--open
   .faq__answer p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.4rem;
   }
+
+  /* -------------------------
+     FOOTER
+     ------------------------- */
 
   .faq__footer {
     flex-direction: column;
@@ -424,5 +514,64 @@
     align-items: flex-start;
 
     gap: 1.5rem;
+
+    margin-top: 4rem;
+
+    padding-top: 2rem;
+  }
+
+  .faq__footer h3 {
+    font-size: 1.7rem;
+
+    line-height: 1.2;
+  }
+
+  .faq__cta {
+    font-size: 0.76rem;
+  }
+}
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .faq__title {
+    font-size: 2.8rem;
+  }
+
+  .faq__question {
+    grid-template-columns:
+      25px
+      minmax(0, 1fr)
+      30px;
+
+    gap: 0.65rem;
+  }
+
+  .faq__number {
+    font-size: 0.68rem;
+  }
+
+  .faq__question-text {
+    font-size: 1.15rem;
+  }
+
+  .faq__icon {
+    width: 27px;
+    height: 27px;
+
+    font-size: 0.85rem;
+  }
+
+  .faq__answer p {
+    margin-left: 32px;
+
+    font-size: 0.8rem;
+  }
+
+  .faq__footer h3 {
+    font-size: 1.55rem;
   }
 }

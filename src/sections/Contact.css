@@ -33,7 +33,11 @@
 }
 
 .contact__container {
+  position: relative;
+  z-index: 1;
+
   width: min(90%, 1280px);
+
   margin: 0 auto;
 
   display: grid;
@@ -56,7 +60,8 @@
 
   color: var(--color-white);
 
-  font-size: clamp(4rem, 7vw, 7rem);
+  font-size:
+    clamp(4rem, 7vw, 7rem);
 
   line-height: 0.88;
 
@@ -74,7 +79,8 @@
 
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.65);
+  color:
+    rgba(255, 255, 255, 0.65);
 
   font-size: 0.95rem;
 
@@ -98,7 +104,7 @@
 
   grid-template-columns:
     55px
-    1fr
+    minmax(0, 1fr)
     30px;
 
   align-items: center;
@@ -136,6 +142,8 @@
 
   transition:
     transform 0.4s ease;
+
+  pointer-events: none;
 }
 
 .contact__method:hover {
@@ -171,6 +179,8 @@
   flex-direction: column;
 
   gap: 0.4rem;
+
+  min-width: 0;
 }
 
 .contact__method div span {
@@ -186,9 +196,12 @@
 }
 
 .contact__method strong {
+  overflow-wrap: anywhere;
+
   font-family: var(--font-display);
 
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-size:
+    clamp(1.5rem, 2.5vw, 2.2rem);
 
   font-weight: 500;
 
@@ -206,7 +219,8 @@
     transform 0.3s ease;
 }
 
-.contact__method:hover .contact__method-arrow {
+.contact__method:hover
+.contact__method-arrow {
   transform:
     translateX(5px);
 }
@@ -222,6 +236,10 @@
 
     gap: 4rem;
   }
+
+  .contact__description {
+    max-width: 650px;
+  }
 }
 
 /* =========================================================
@@ -230,21 +248,133 @@
 
 @media (max-width: 600px) {
 
+  .contact__container {
+    width: 90%;
+
+    gap: 3rem;
+  }
+
+  .contact::after {
+    width: 300px;
+    height: 300px;
+
+    right: -170px;
+    bottom: -170px;
+  }
+
   .contact__title {
     font-size:
       clamp(3.2rem, 15vw, 5rem);
+
+    line-height: 0.9;
+  }
+
+  .contact__description {
+    font-size: 0.9rem;
+
+    line-height: 1.75;
+  }
+
+  /* -------------------------
+     MÉTODOS
+     ------------------------- */
+
+  .contact__method {
+    grid-template-columns:
+      32px
+      minmax(0, 1fr)
+      18px;
+
+    gap: 0.8rem;
+
+    padding:
+      1.4rem
+      0;
+  }
+
+  /*
+   * En móvil eliminamos el hover expansivo.
+   * Evita desplazamientos extraños en Safari
+   * y navegadores táctiles.
+   */
+
+  .contact__method:hover {
+    padding-left: 0;
+
+    padding-right: 0;
+  }
+
+  .contact__method::before {
+    display: none;
+  }
+
+  .contact__method-number {
+    align-self: start;
+
+    padding-top: 0.2rem;
+
+    font-size: 0.78rem;
+  }
+
+  .contact__method div {
+    gap: 0.3rem;
+  }
+
+  .contact__method div span {
+    font-size: 0.55rem;
+
+    letter-spacing: 0.1em;
+  }
+
+  .contact__method strong {
+    font-size:
+      clamp(1.3rem, 6.5vw, 1.65rem);
+
+    line-height: 1.15;
+
+    overflow-wrap: anywhere;
+  }
+
+  .contact__method-arrow {
+    font-size: 0.95rem;
+
+    text-align: center;
+  }
+
+  .contact__method:hover
+  .contact__method-arrow {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .contact__title {
+    font-size: 2.9rem;
   }
 
   .contact__method {
     grid-template-columns:
-      40px
-      1fr
-      20px;
+      28px
+      minmax(0, 1fr)
+      16px;
 
-    gap: 1rem;
+    gap: 0.65rem;
+  }
+
+  .contact__method-number {
+    font-size: 0.72rem;
   }
 
   .contact__method strong {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .contact__method div span {
+    font-size: 0.52rem;
   }
 }

@@ -41,7 +41,8 @@
 
   font-family: var(--font-display);
 
-  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  font-size:
+    clamp(3.5rem, 6vw, 6.5rem);
 
   font-weight: 500;
 
@@ -128,6 +129,8 @@
   align-items: center;
 
   justify-content: space-between;
+
+  gap: 1rem;
 }
 
 .specialty-card__number {
@@ -143,6 +146,8 @@
 }
 
 .specialty-card__arrow {
+  flex-shrink: 0;
+
   color: var(--color-gold);
 
   font-size: 1.4rem;
@@ -161,22 +166,30 @@
   z-index: 2;
 
   max-width: 430px;
+
+  min-width: 0;
 }
 
 .specialty-card h3 {
-  margin: 0 0 1rem;
+  margin:
+    0
+    0
+    1rem;
 
   color: var(--color-forest);
 
   font-family: var(--font-display);
 
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size:
+    clamp(2rem, 3vw, 3rem);
 
   font-weight: 500;
 
   line-height: 1;
 
   letter-spacing: -0.025em;
+
+  overflow-wrap: break-word;
 
   transition:
     color 0.45s ease;
@@ -243,11 +256,14 @@
 
   opacity: 0;
 
-  transform: scale(0.7);
+  transform:
+    scale(0.7);
 
   transition:
     opacity 0.5s ease,
     transform 0.5s ease;
+
+  pointer-events: none;
 }
 
 .specialty-card::after {
@@ -271,19 +287,23 @@
 
   opacity: 0;
 
-  transform: scale(0.7);
+  transform:
+    scale(0.7);
 
   transition:
     opacity 0.5s ease,
     transform 0.5s ease;
+
+  pointer-events: none;
 }
 
 /* =========================================================
-   HOVER
+   HOVER — ESCRITORIO
    ========================================================= */
 
 .specialty-card:hover {
-  background: var(--color-forest);
+  background:
+    var(--color-forest);
 }
 
 .specialty-card:hover h3 {
@@ -311,7 +331,8 @@
 .specialty-card:hover::after {
   opacity: 1;
 
-  transform: scale(1);
+  transform:
+    scale(1);
 }
 
 /* =========================================================
@@ -348,6 +369,8 @@
   align-items: center;
 
   gap: 12px;
+
+  flex-shrink: 0;
 
   color: var(--color-forest);
 
@@ -406,33 +429,210 @@
 
 @media (max-width: 600px) {
 
-  .specialties__grid {
-    grid-template-columns: 1fr;
+  .specialties__container {
+    width: 90%;
   }
 
-  .specialty-card {
-    min-height: 280px;
+  .specialties__header {
+    gap: 1.5rem;
 
-    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .specialties__title {
+    font-size:
+      clamp(3rem, 14vw, 4.5rem);
+
+    line-height: 0.9;
+  }
+
+  .specialties__intro {
+    font-size: 0.9rem;
+
+    line-height: 1.75;
+  }
+
+  /* -------------------------
+     GRID
+     ------------------------- */
+
+  .specialties__grid {
+    grid-template-columns: 1fr;
+
+    gap: 1px;
+  }
+
+  /* -------------------------
+     TARJETA
+     ------------------------- */
+
+  .specialty-card {
+    min-height: 300px;
+
+    padding:
+      1.8rem;
+  }
+
+  .specialty-card__top {
+    gap: 0.8rem;
+  }
+
+  .specialty-card__number {
+    font-size: 0.9rem;
+  }
+
+  .specialty-card__arrow {
+    font-size: 1.2rem;
+  }
+
+  .specialty-card__content {
+    max-width: none;
   }
 
   .specialty-card h3 {
-    font-size: 2rem;
+    margin-bottom: 0.8rem;
+
+    font-size:
+      clamp(1.8rem, 8vw, 2.25rem);
+
+    line-height: 1.05;
   }
 
+  .specialty-card p {
+    max-width: none;
+
+    font-size: 0.82rem;
+
+    line-height: 1.7;
+  }
+
+  /* -------------------------
+     LÍNEA INFERIOR
+     ------------------------- */
+
   .specialty-card__line {
-    left: 2rem;
+    left: 1.8rem;
+  }
+
+  /*
+   * En móvil dejamos la línea visible
+   * de forma sutil para conservar el
+   * detalle visual sin depender del hover.
+   */
+
+  .specialty-card__line {
+    width:
+      calc(100% - 3.6rem);
+
+    height: 2px;
+  }
+
+  /* -------------------------
+     DESACTIVAR HOVER TÁCTIL
+     ------------------------- */
+
+  .specialty-card:hover {
+    background:
+      var(--color-ivory);
+  }
+
+  .specialty-card:hover h3 {
+    color:
+      var(--color-forest);
+  }
+
+  .specialty-card:hover p {
+    color:
+      var(--color-text-soft);
+  }
+
+  .specialty-card:hover
+  .specialty-card__arrow {
+    transform: none;
   }
 
   .specialty-card:hover
   .specialty-card__line {
     width:
-      calc(100% - 4rem);
+      calc(100% - 3.6rem);
   }
+
+  .specialty-card:hover::before,
+  .specialty-card:hover::after {
+    opacity: 0;
+
+    transform:
+      scale(0.7);
+  }
+
+  /* -------------------------
+     FOOTER
+     ------------------------- */
 
   .specialties__footer {
     flex-direction: column;
 
     align-items: flex-start;
+
+    gap: 1.5rem;
+
+    margin-top: 3rem;
+  }
+
+  .specialties__footer p {
+    font-size: 1.3rem;
+
+    line-height: 1.25;
+  }
+
+  .specialties__cta {
+    font-size: 0.76rem;
+  }
+
+  .specialties__cta:hover span {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .specialties__title {
+    font-size: 2.8rem;
+  }
+
+  .specialty-card {
+    min-height: 285px;
+
+    padding:
+      1.5rem;
+  }
+
+  .specialty-card h3 {
+    font-size: 1.7rem;
+  }
+
+  .specialty-card p {
+    font-size: 0.78rem;
+  }
+
+  .specialty-card__line {
+    left: 1.5rem;
+
+    width:
+      calc(100% - 3rem);
+  }
+
+  .specialty-card:hover
+  .specialty-card__line {
+    width:
+      calc(100% - 3rem);
+  }
+
+  .specialties__footer p {
+    font-size: 1.2rem;
   }
 }

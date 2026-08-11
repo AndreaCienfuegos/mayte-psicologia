@@ -1,0 +1,435 @@
+/* =========================================================
+   FOOTER — CIERRE
+   ========================================================= */
+
+.footer {
+  position: relative;
+
+  background: var(--color-forest);
+
+  color: var(--color-white);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.footer__container {
+  width: min(90%, 1280px);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   PARTE PRINCIPAL
+   ========================================================= */
+
+.footer__main {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    0.7fr
+    0.7fr;
+
+  gap: 5rem;
+
+  padding:
+    6rem
+    0
+    5rem;
+}
+
+
+/* =========================================================
+   MARCA
+   ========================================================= */
+
+.footer__brand {
+  max-width: 420px;
+}
+
+.footer__logo {
+  display: inline-flex;
+
+  flex-direction: column;
+
+  color: var(--color-white);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  font-weight: 500;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.04em;
+
+  text-decoration: none;
+}
+
+.footer__logo span {
+  color: var(--color-sage);
+
+  font-size: 0.62em;
+}
+
+.footer__profession {
+  margin: 1.5rem 0 0;
+
+  color: var(--color-gold);
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.footer__tagline {
+  max-width: 320px;
+
+  margin: 2rem 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-family: var(--font-display);
+
+  font-size: 1.15rem;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   COLUMNAS
+   ========================================================= */
+
+.footer__column {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.footer__column-title {
+  margin-bottom: 1.5rem;
+
+  color: var(--color-gold);
+
+  font-size: 0.62rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+
+.footer__nav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.8rem;
+}
+
+.footer__nav a {
+  position: relative;
+
+  width: fit-content;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 0.78rem;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer__nav a:hover {
+  color: var(--color-white);
+
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+.footer__contact {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 0.8rem;
+}
+
+.footer__contact > a:first-child {
+  color: var(--color-white);
+
+  font-family: var(--font-display);
+
+  font-size: 1.35rem;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+.footer__contact > a:first-child:hover {
+  color: var(--color-gold);
+}
+
+.footer__contact > span {
+  color:
+    rgba(255, 255, 255, 0.52);
+
+  font-size: 0.72rem;
+}
+
+.footer__contact-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 1rem;
+
+  color: var(--color-gold);
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+.footer__contact-link span {
+  transition:
+    transform 0.3s ease;
+}
+
+.footer__contact-link:hover {
+  color: var(--color-white);
+}
+
+.footer__contact-link:hover span {
+  transform:
+    translateX(5px);
+}
+
+
+/* =========================================================
+   FRASE CENTRAL
+   ========================================================= */
+
+.footer__statement {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 1.2rem;
+
+  padding:
+    4rem
+    1rem;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  text-align: center;
+}
+
+.footer__statement-mark {
+  color: var(--color-gold);
+
+  font-size: 1.2rem;
+}
+
+.footer__statement p {
+  max-width: 750px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+
+  font-weight: 500;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.02em;
+}
+
+.footer__statement p span {
+  display: block;
+
+  color: var(--color-sage);
+}
+
+
+/* =========================================================
+   PARTE INFERIOR
+   ========================================================= */
+
+.footer__bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding:
+    1.8rem
+    0;
+}
+
+.footer__copyright {
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size: 0.62rem;
+
+  line-height: 1.5;
+}
+
+.footer__legal {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.footer__legal a {
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  font-size: 0.62rem;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+.footer__legal a:hover {
+  color: var(--color-gold);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .footer__main {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 4rem;
+
+    padding:
+      5rem
+      0
+      4rem;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .footer__main {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+
+    padding:
+      4rem
+      0
+      3.5rem;
+  }
+
+  .footer__brand {
+    grid-column: auto;
+  }
+
+  .footer__logo {
+    font-size: 3.5rem;
+  }
+
+  .footer__statement {
+    padding:
+      3.5rem
+      1rem;
+  }
+
+  .footer__statement p {
+    font-size: 1.65rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 1.2rem;
+  }
+
+  .footer__legal {
+    flex-wrap: wrap;
+
+    gap: 1rem;
+  }
+}

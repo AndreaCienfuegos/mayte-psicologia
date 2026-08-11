@@ -1,0 +1,466 @@
+/* =========================================================
+   BOOKING — RESERVAR UNA CITA
+   ========================================================= */
+
+.booking {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--color-cream);
+}
+
+.booking__container {
+  width: min(90%, 1280px);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.booking__header {
+  max-width: 900px;
+
+  margin-bottom: 5rem;
+}
+
+.booking__title {
+  margin: 1.5rem 0 0;
+
+  color: var(--color-forest);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(3.8rem, 7vw, 7rem);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.045em;
+}
+
+.booking__title span {
+  display: block;
+
+  color: var(--color-sage);
+}
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.booking__content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.75fr)
+    minmax(450px, 1fr);
+
+  gap: clamp(4rem, 8vw, 9rem);
+
+  align-items: center;
+}
+
+/* =========================================================
+   MENSAJE
+   ========================================================= */
+
+.booking__message {
+  max-width: 480px;
+}
+
+.booking__lead {
+  margin: 0;
+
+  color: var(--color-forest);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.02em;
+}
+
+.booking__text {
+  margin: 1.8rem 0 0;
+
+  color: var(--color-text-soft);
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+.booking__note {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 1rem;
+
+  margin-top: 3rem;
+
+  padding-top: 1.5rem;
+
+  border-top:
+    1px solid
+    rgba(198, 166, 107, 0.45);
+}
+
+.booking__note > span {
+  flex-shrink: 0;
+
+  color: var(--color-gold);
+
+  font-size: 1rem;
+}
+
+.booking__note p {
+  margin: 0;
+
+  color: var(--color-text-light);
+
+  font-size: 0.78rem;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ACCIONES
+   ========================================================= */
+
+.booking__actions {
+  display: flex;
+
+  flex-direction: column;
+
+  border-top:
+    1px solid
+    var(--color-border);
+}
+
+/* =========================================================
+   ACCIÓN
+   ========================================================= */
+
+.booking__action {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    60px
+    1fr
+    30px;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  padding: 2rem 0;
+
+  border-bottom:
+    1px solid
+    var(--color-border);
+
+  color: inherit;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    padding 0.4s ease;
+}
+
+.booking__action::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: var(--color-forest);
+
+  transform:
+    scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    transform 0.45s
+    cubic-bezier(0.22, 1, 0.36, 1);
+
+  z-index: 0;
+}
+
+.booking__action:hover {
+  padding-left: 1.5rem;
+
+  padding-right: 1.5rem;
+}
+
+.booking__action:hover::before {
+  transform:
+    scaleX(1);
+}
+
+/* =========================================================
+   ICONO
+   ========================================================= */
+
+.booking__action-icon {
+  position: relative;
+
+  z-index: 1;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(198, 166, 107, 0.55);
+
+  border-radius: 50%;
+
+  color: var(--color-gold);
+
+  font-size: 1.1rem;
+
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.booking__action:hover
+.booking__action-icon {
+  background:
+    rgba(198, 166, 107, 0.08);
+
+  border-color:
+    rgba(198, 166, 107, 0.85);
+}
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.booking__action-content {
+  position: relative;
+
+  z-index: 1;
+}
+
+.booking__action-content > span {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: var(--color-gold);
+
+  font-size: 0.62rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.booking__action-content h3 {
+  margin: 0;
+
+  color: var(--color-forest);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.02em;
+
+  transition:
+    color 0.4s ease;
+}
+
+.booking__action-content p {
+  margin: 0.65rem 0 0;
+
+  color: var(--color-text-soft);
+
+  font-size: 0.78rem;
+
+  line-height: 1.5;
+
+  transition:
+    color 0.4s ease;
+}
+
+/* =========================================================
+   FLECHA
+   ========================================================= */
+
+.booking__action-arrow {
+  position: relative;
+
+  z-index: 1;
+
+  color: var(--color-gold);
+
+  font-size: 1.3rem;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.booking__action:hover
+.booking__action-content h3 {
+  color: var(--color-white);
+}
+
+.booking__action:hover
+.booking__action-content p {
+  color:
+    rgba(255, 255, 255, 0.68);
+}
+
+.booking__action:hover
+.booking__action-arrow {
+  transform:
+    translateX(5px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.booking__footer {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 6rem;
+
+  padding-top: 2rem;
+
+  border-top:
+    1px solid
+    var(--color-border);
+}
+
+.booking__footer-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.booking__footer-item span {
+  color: var(--color-gold);
+
+  font-family: var(--font-display);
+
+  font-size: 0.95rem;
+}
+
+.booking__footer-item p {
+  margin: 0;
+
+  color: var(--color-text-light);
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .booking__content {
+    grid-template-columns: 1fr;
+
+    gap: 4rem;
+  }
+
+  .booking__message {
+    max-width: 650px;
+  }
+
+  .booking__footer {
+    margin-top: 4rem;
+  }
+}
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .booking__title {
+    font-size:
+      clamp(3rem, 14vw, 4.6rem);
+  }
+
+  .booking__content {
+    gap: 3rem;
+  }
+
+  .booking__action {
+    grid-template-columns:
+      48px
+      1fr
+      20px;
+
+    gap: 1rem;
+
+    padding: 1.6rem 0;
+  }
+
+  .booking__action:hover {
+    padding-left: 0.75rem;
+
+    padding-right: 0.75rem;
+  }
+
+  .booking__action-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .booking__action-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .booking__footer {
+    grid-template-columns: 1fr;
+
+    gap: 1.2rem;
+  }
+}

@@ -1,0 +1,238 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(248, 245, 239, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(35, 68, 58, 0.08);
+}
+
+.navbar__container {
+  width: min(92%, 1400px);
+  min-height: 88px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.navbar__brand {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 0.85;
+
+  transition: opacity 0.3s ease;
+}
+
+.navbar__brand:hover {
+  opacity: 0.75;
+}
+
+.navbar__name {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  color: var(--color-forest);
+}
+
+.navbar__surname {
+  margin-top: 5px;
+
+  color: var(--color-gold);
+
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.navbar__nav a {
+  position: relative;
+
+  color: var(--color-text);
+
+  font-size: 0.82rem;
+  font-weight: 500;
+
+  transition: color 0.3s ease;
+}
+
+.navbar__nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--color-gold);
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+.navbar__nav a:hover {
+  color: var(--color-forest);
+}
+
+.navbar__nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.navbar__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 0 22px;
+
+  border: 1px solid var(--color-forest);
+  border-radius: 999px;
+
+  color: var(--color-forest);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar__cta:hover {
+  background: var(--color-forest);
+  color: var(--color-white);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   MOBILE TOGGLE
+   ========================================================= */
+
+.navbar__toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  background: transparent;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar__toggle span {
+  display: block;
+
+  width: 22px;
+  height: 1px;
+
+  background: var(--color-forest);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar__container {
+    min-height: 76px;
+  }
+
+  .navbar__nav {
+    position: absolute;
+    top: 76px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 2rem;
+
+    background: var(--color-ivory);
+
+    border-bottom: 1px solid var(--color-border);
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .navbar__nav--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__toggle--active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .navbar__toggle--active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar__toggle--active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}

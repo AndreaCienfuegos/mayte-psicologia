@@ -1,0 +1,273 @@
+/* =========================================================
+   MAYTE CACHARRÓN — SISTEMA VISUAL
+   Psicología · Logopedia
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+  /* Colores principales */
+  --color-forest: #23443A;
+  --color-forest-dark: #18342C;
+  --color-sage: #8FA99B;
+
+  /* Fondos */
+  --color-ivory: #F8F5EF;
+  --color-cream: #EFE8DC;
+  --color-white: #FFFFFF;
+
+  /* Acento */
+  --color-gold: #C6A66B;
+  --color-gold-light: #D8BF8A;
+
+  /* Texto */
+  --color-text: #26332E;
+  --color-text-soft: #65736D;
+  --color-text-light: #8A948F;
+
+  /* Bordes */
+  --color-border: rgba(35, 68, 58, 0.12);
+
+  /* Tipografías */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Espaciado */
+  --section-padding: clamp(5rem, 10vw, 9rem);
+
+  /* Bordes */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  /* Sombras */
+  --shadow-soft: 0 15px 40px rgba(35, 68, 58, 0.08);
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: var(--color-ivory);
+  color: var(--color-text);
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* =========================================================
+   TIPOGRAFÍA
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--color-forest);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+}
+
+h2 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+}
+
+h3 {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+p {
+  color: var(--color-text-soft);
+}
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.container {
+  width: min(90%, 1280px);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   UTILIDADES
+   ========================================================= */
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-sage {
+  color: var(--color-sage);
+}
+
+.text-forest {
+  color: var(--color-forest);
+}
+
+.gold-line {
+  width: 60px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section--cream {
+  background-color: var(--color-cream);
+}
+
+.section--forest {
+  background-color: var(--color-forest);
+  color: var(--color-white);
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--color-gold);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 52px;
+  padding: 0 28px;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  background: var(--color-forest);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background: var(--color-forest-dark);
+}
+
+.btn--gold {
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+.btn--gold:hover {
+  background: #B39359;
+}
+
+.btn--outline {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-forest);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-gold);
+}
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   SELECCIÓN DE TEXTO
+   ========================================================= */
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-white);
+}

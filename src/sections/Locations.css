@@ -1,0 +1,421 @@
+/* =========================================================
+   LOCATIONS — DÓNDE ENCONTRARME
+   ========================================================= */
+
+.locations {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--color-forest);
+
+  color: var(--color-white);
+}
+
+.locations__container {
+  width: min(90%, 1280px);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.locations__header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.9fr)
+    minmax(300px, 0.6fr);
+
+  align-items: end;
+
+  gap: 5rem;
+
+  margin-bottom: 5rem;
+}
+
+.locations__header .section-label {
+  grid-column: 1 / -1;
+
+  margin-bottom: -2rem;
+}
+
+.locations__title {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: clamp(3.5rem, 6vw, 6.2rem);
+
+  line-height: 0.92;
+
+  letter-spacing: -0.04em;
+}
+
+.locations__title span {
+  display: block;
+
+  color: var(--color-sage);
+}
+
+.locations__intro {
+  max-width: 470px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   GRID DE CONSULTAS
+   ========================================================= */
+
+.locations__grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.5rem;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TARJETA
+   ========================================================= */
+
+.location-card {
+  position: relative;
+
+  min-height: 520px;
+
+  padding: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.location-card:hover {
+  background: rgba(255, 255, 255, 0.075);
+
+  border-color:
+    rgba(198, 166, 107, 0.55);
+
+  transform: translateY(-5px);
+}
+
+/* =========================================================
+   PARTE SUPERIOR
+   ========================================================= */
+
+.location-card__top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+.location-card__number {
+  color: var(--color-gold);
+
+  font-family: var(--font-display);
+
+  font-size: 1.1rem;
+
+  font-weight: 600;
+}
+
+.location-card__city {
+  padding:
+    0.45rem
+    0.8rem;
+
+  border:
+    1px solid
+    rgba(198, 166, 107, 0.35);
+
+  color: var(--color-gold);
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.location-card__content {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.location-card__pin {
+  margin-bottom: 1.2rem;
+
+  color: var(--color-gold);
+
+  font-size: 1.5rem;
+
+  line-height: 1;
+}
+
+.location-card__type {
+  display: block;
+
+  margin-bottom: 0.7rem;
+
+  color: var(--color-gold);
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.location-card h3 {
+  max-width: 450px;
+
+  margin: 0 0 1.5rem;
+
+  color: var(--color-white);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+
+  line-height: 1;
+}
+
+.location-card__address {
+  margin: 0 0 1.5rem;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+.location-card__description {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.85rem;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ENLACE — CÓMO LLEGAR
+   ========================================================= */
+
+.location-card__link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  align-self: flex-start;
+
+  color: var(--color-white);
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+.location-card__link span {
+  color: var(--color-gold);
+
+  font-size: 1rem;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.location-card__link:hover {
+  color: var(--color-gold);
+}
+
+.location-card__link:hover span {
+  transform:
+    translate(4px, -4px);
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.locations__cta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 3rem;
+
+  max-width: 1100px;
+
+  margin: 5rem auto 0;
+
+  padding-top: 3rem;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+}
+
+.locations__cta-label {
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  color: var(--color-gold);
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.locations__cta h3 {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+.locations__cta .btn {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .locations__header {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .locations__header .section-label {
+    grid-column: auto;
+
+    margin-bottom: 0;
+  }
+
+  .locations__grid {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+  }
+
+  .location-card {
+    min-height: 450px;
+  }
+}
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .locations__title {
+    font-size:
+      clamp(3rem, 14vw, 4.5rem);
+  }
+
+  .locations__intro {
+    font-size: 0.92rem;
+  }
+
+  .location-card {
+    min-height: 420px;
+
+    padding: 2rem;
+  }
+
+  .location-card h3 {
+    font-size: 2.1rem;
+  }
+
+  .location-card__description {
+    font-size: 0.82rem;
+  }
+
+  .locations__cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 2rem;
+
+    margin-top: 4rem;
+  }
+
+  .locations__cta .btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+}

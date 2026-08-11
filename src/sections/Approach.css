@@ -1,0 +1,381 @@
+/* =========================================================
+   APPROACH — CÓMO TRABAJO
+   ========================================================= */
+
+.approach {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--color-ivory);
+}
+
+.approach__container {
+  width: min(90%, 1280px);
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.approach__intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.9fr)
+    minmax(300px, 0.7fr);
+
+  align-items: end;
+
+  gap: 6rem;
+
+  margin-bottom: 6rem;
+}
+
+.approach__title {
+  margin: 0;
+
+  color: var(--color-forest);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(3.4rem, 5.8vw, 6rem);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.045em;
+}
+
+.approach__title span {
+  display: block;
+
+  color: var(--color-sage);
+}
+
+.approach__description {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: var(--color-text-soft);
+
+  font-size: 0.95rem;
+
+  line-height: 1.85;
+}
+
+/* =========================================================
+   PASOS
+   ========================================================= */
+
+.approach__steps {
+  position: relative;
+
+  border-top:
+    1px solid
+    var(--color-border);
+}
+
+.approach__step {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    100px
+    1fr
+    50px;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  min-height: 180px;
+
+  padding: 2rem 0;
+
+  border-bottom:
+    1px solid
+    var(--color-border);
+
+  overflow: hidden;
+
+  transition:
+    padding 0.4s ease;
+}
+
+/* =========================================================
+   FONDO HOVER
+   ========================================================= */
+
+.approach__step::before {
+  content: "";
+
+  position: absolute;
+
+  left: -5%;
+
+  top: 0;
+
+  width: 110%;
+
+  height: 100%;
+
+  background: var(--color-forest);
+
+  transform:
+    scaleY(0);
+
+  transform-origin: bottom;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+  z-index: 0;
+}
+
+.approach__step:hover {
+  padding-left: 1.5rem;
+
+  padding-right: 1.5rem;
+}
+
+.approach__step:hover::before {
+  transform:
+    scaleY(1);
+}
+
+/* =========================================================
+   NÚMERO
+   ========================================================= */
+
+.approach__step-number {
+  position: relative;
+
+  z-index: 1;
+
+  color: var(--color-gold);
+
+  font-family: var(--font-display);
+
+  font-size: 1.1rem;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.approach__step:hover
+.approach__step-number {
+  transform:
+    translateX(3px);
+}
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.approach__step-content {
+  position: relative;
+
+  z-index: 1;
+}
+
+.approach__step-content h3 {
+  margin: 0 0 0.7rem;
+
+  color: var(--color-forest);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2rem, 3vw, 3rem);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.02em;
+
+  transition:
+    color 0.4s ease;
+}
+
+.approach__step-content p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--color-text-soft);
+
+  font-size: 0.88rem;
+
+  line-height: 1.7;
+
+  transition:
+    color 0.4s ease;
+}
+
+/* =========================================================
+   FLECHA
+   ========================================================= */
+
+.approach__step-arrow {
+  position: relative;
+
+  z-index: 1;
+
+  color: var(--color-gold);
+
+  font-size: 1.5rem;
+
+  text-align: right;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.approach__step:hover
+.approach__step-arrow {
+  transform:
+    translate(5px, -5px);
+}
+
+.approach__step:hover
+.approach__step-content h3 {
+  color: var(--color-white);
+}
+
+.approach__step:hover
+.approach__step-content p {
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+/* =========================================================
+   CIERRE
+   ========================================================= */
+
+.approach__closing {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  max-width: 800px;
+
+  margin: 6rem auto 0;
+
+  text-align: center;
+}
+
+.approach__closing-mark {
+  flex-shrink: 0;
+
+  color: var(--color-gold);
+
+  font-size: 1.3rem;
+}
+
+.approach__closing p {
+  margin: 0;
+
+  color: var(--color-forest);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+
+  font-weight: 500;
+
+  line-height: 1.35;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .approach__intro {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+
+    margin-bottom: 4rem;
+  }
+
+  .approach__description {
+    max-width: 650px;
+  }
+
+  .approach__step {
+    grid-template-columns:
+      70px
+      1fr
+      40px;
+
+    gap: 1.5rem;
+  }
+}
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .approach__title {
+    font-size:
+      clamp(3rem, 14vw, 4.5rem);
+  }
+
+  .approach__step {
+    grid-template-columns:
+      45px
+      1fr;
+
+    gap: 1rem;
+
+    min-height: 0;
+
+    padding: 2rem 0;
+  }
+
+  .approach__step:hover {
+    padding-left: 0.75rem;
+
+    padding-right: 0.75rem;
+  }
+
+  .approach__step-arrow {
+    display: none;
+  }
+
+  .approach__step-content h3 {
+    font-size: 2rem;
+  }
+
+  .approach__step-content p {
+    font-size: 0.85rem;
+  }
+
+  .approach__closing {
+    margin-top: 4rem;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    padding:
+      0
+      1rem;
+  }
+}

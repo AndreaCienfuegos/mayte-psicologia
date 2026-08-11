@@ -1,116 +1,64 @@
+import React from "react";
 import "./Hero.css";
 
 function Hero() {
   return (
     <section className="hero" id="inicio">
-      <div className="hero__background"></div>
-
       <div className="hero__container">
 
-        {/* CONTENIDO */}
         <div className="hero__content">
 
-          <div className="hero__eyebrow">
-            <span className="hero__eyebrow-line"></span>
-            <span>Psicología · Logopedia</span>
-          </div>
+          <span className="section-label">
+            PSICOLOGÍA · LOGOPEDIA
+          </span>
 
           <h1 className="hero__title">
             Un espacio para
-            <span>comprenderte,</span>
-            <span>cuidarte y avanzar.</span>
+            <span>volver a ti.</span>
           </h1>
 
           <p className="hero__description">
-            Soy Mayte Cacharrón, psicóloga sanitaria y logopeda,
-            y llevo más de 20 años acompañando a personas y familias
-            en sus procesos de cambio.
+            Un acompañamiento profesional, cercano y personalizado para
+            ayudarte a comprenderte, cuidarte y avanzar.
           </p>
 
-          {/* BOTONES */}
           <div className="hero__actions">
-
-            <a href="#citas" className="btn btn--primary">
-              Reservar una cita
-              <span>→</span>
+            <a href="#contacto" className="btn btn--primary">
+              Solicitar cita
             </a>
 
-            <a href="#sobre-mi" className="hero__secondary-link">
-              Conocer a Mayte
-              <span>↓</span>
+            <a href="#servicios" className="btn btn--secondary">
+              Descubrir cómo trabajo
             </a>
-
-          </div>
-
-          {/* DATOS */}
-          <div className="hero__credentials">
-
-            <div className="hero__credential">
-              <strong>+20</strong>
-              <span>
-                años de
-                <br />
-                experiencia
-              </span>
-            </div>
-
-            <div className="hero__credential-divider"></div>
-
-            <div className="hero__credential">
-              <strong>2</strong>
-              <span>
-                espacios
-                <br />
-                de consulta
-              </span>
-            </div>
-
           </div>
 
         </div>
 
-        {/* IMAGEN */}
         <div className="hero__visual">
 
-          <div className="hero__image-frame">
+          <div className="hero__image-wrapper">
 
             <img
-              src="/mayte-hero.jpg"
+              src={`${import.meta.env.BASE_URL}mayte-hero.jpg`}
               alt="Mayte Cacharrón, psicóloga sanitaria y logopeda"
+              className="hero__image"
             />
 
           </div>
 
-          {/* DETALLE DORADO */}
-          <div className="hero__gold-detail"></div>
+          <div className="hero__badge">
+            <span className="hero__badge-number">01</span>
 
-          {/* TARJETA FLOTANTE */}
-          <div className="hero__floating-card">
-
-            <span className="hero__floating-icon">
-              ✦
+            <span className="hero__badge-text">
+              Psicología sanitaria
+              <br />
+              y logopedia
             </span>
-
-            <div>
-              <strong>Psicología cercana</strong>
-              <span>Un espacio para ti</span>
-            </div>
-
           </div>
 
         </div>
 
       </div>
-
-      {/* INDICADOR DE SCROLL */}
-      <div className="hero__scroll">
-
-        <span>Descubre más</span>
-
-        <div className="hero__scroll-line"></div>
-
-      </div>
-
     </section>
   );
 }

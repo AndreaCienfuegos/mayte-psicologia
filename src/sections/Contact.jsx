@@ -2,10 +2,16 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <section className="contact section" id="contacto">
+    <section
+      className="contact section"
+      id="contacto"
+    >
       <div className="contact__container">
 
-        {/* CONTENIDO PRINCIPAL */}
+        {/* =====================================================
+            CONTENIDO PRINCIPAL
+            ===================================================== */}
+
         <div className="contact__main">
 
           <div className="section-label">
@@ -26,20 +32,29 @@ function Contact() {
 
         </div>
 
-        {/* FORMAS DE CONTACTO */}
+        {/* =====================================================
+            FORMAS DE CONTACTO
+            ===================================================== */}
+
         <div className="contact__methods">
 
-          {/* TELÉFONO */}
+          {/* -----------------------------------------------------
+              TELÉFONO
+              ----------------------------------------------------- */}
+
           <a
             href="tel:+34629221532"
             className="contact__method"
+            aria-label="Llamar al 629 22 15 32"
           >
             <span className="contact__method-number">
               01
             </span>
 
             <div>
-              <span>Teléfono</span>
+              <span>
+                Teléfono
+              </span>
 
               <strong>
                 629 22 15 32
@@ -51,20 +66,26 @@ function Contact() {
             </span>
           </a>
 
-          {/* EMAIL */}
+          {/* -----------------------------------------------------
+              CONTACTO
+              ----------------------------------------------------- */}
+
           <a
             href="#citas"
             className="contact__method"
+            aria-label="Contactar con Mayte"
           >
             <span className="contact__method-number">
               02
             </span>
 
             <div>
-              <span>Email</span>
+              <span>
+                Contacto
+              </span>
 
               <strong>
-                Escribir un mensaje
+                Resolver una duda
               </strong>
             </div>
 
@@ -73,17 +94,23 @@ function Contact() {
             </span>
           </a>
 
-          {/* CITA */}
+          {/* -----------------------------------------------------
+              CITA
+              ----------------------------------------------------- */}
+
           <a
             href="#citas"
             className="contact__method"
+            aria-label="Solicitar una cita"
           >
             <span className="contact__method-number">
               03
             </span>
 
             <div>
-              <span>Citas</span>
+              <span>
+                Citas
+              </span>
 
               <strong>
                 Solicitar una cita

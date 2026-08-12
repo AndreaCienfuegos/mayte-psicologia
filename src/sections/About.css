@@ -1,11 +1,10 @@
 /* =========================================================
    ABOUT — SOBRE MAYTE
-   ========================================================= */
+========================================================= */
 
 .about {
   position: relative;
   overflow: hidden;
-
   background: var(--color-ivory);
 }
 
@@ -16,7 +15,7 @@
 
 /* =========================================================
    CABECERA
-   ========================================================= */
+========================================================= */
 
 .about__header {
   max-width: 800px;
@@ -47,7 +46,7 @@
 
 /* =========================================================
    CONTENIDO
-   ========================================================= */
+========================================================= */
 
 .about__content {
   display: grid;
@@ -63,7 +62,7 @@
 
 /* =========================================================
    IMAGEN
-   ========================================================= */
+========================================================= */
 
 .about__visual {
   position: relative;
@@ -84,6 +83,8 @@
   overflow: hidden;
 
   background: var(--color-sage);
+
+  border: 1px solid rgba(35, 68, 58, 0.08);
 }
 
 .about__image {
@@ -93,11 +94,9 @@
   height: 100%;
 
   object-fit: cover;
-
   object-position: center;
 
-  transition:
-    transform 0.7s ease;
+  transition: transform 0.7s ease;
 }
 
 .about__visual:hover .about__image {
@@ -106,7 +105,7 @@
 
 /* =========================================================
    DETALLE DORADO
-   ========================================================= */
+========================================================= */
 
 .about__gold-detail {
   position: absolute;
@@ -126,11 +125,13 @@
     var(--color-gold);
 
   pointer-events: none;
+
+  z-index: 2;
 }
 
 /* =========================================================
    +20 AÑOS
-   ========================================================= */
+========================================================= */
 
 .about__experience {
   position: absolute;
@@ -146,7 +147,6 @@
   flex-direction: column;
 
   justify-content: center;
-
   align-items: center;
 
   background: var(--color-forest);
@@ -177,6 +177,8 @@
 }
 
 .about__experience span {
+  max-width: 100px;
+
   margin-top: 0.5rem;
 
   color: rgba(255, 255, 255, 0.68);
@@ -194,10 +196,12 @@
 
 /* =========================================================
    TEXTO
-   ========================================================= */
+========================================================= */
 
 .about__text {
   max-width: 620px;
+
+  min-width: 0;
 }
 
 .about__text p {
@@ -217,16 +221,19 @@
 
   font-family: var(--font-display);
 
-  font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+  font-size:
+    clamp(1.7rem, 2.5vw, 2.5rem);
 
   font-weight: 500;
 
   line-height: 1.25;
+
+  letter-spacing: -0.02em;
 }
 
 /* =========================================================
    FIRMA
-   ========================================================= */
+========================================================= */
 
 .about__signature {
   display: flex;
@@ -269,6 +276,8 @@
   font-size: 1.1rem;
 
   font-weight: 500;
+
+  line-height: 1.2;
 }
 
 .about__signature span {
@@ -283,7 +292,7 @@
 
 /* =========================================================
    CREDENCIALES
-   ========================================================= */
+========================================================= */
 
 .about__credentials {
   display: grid;
@@ -340,6 +349,8 @@
   flex-direction: column;
 
   gap: 0.45rem;
+
+  min-width: 0;
 }
 
 .about__credential strong {
@@ -364,10 +375,9 @@
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 950px) {
-
   .about__header {
     margin-bottom: 4rem;
   }
@@ -411,10 +421,9 @@
 
 /* =========================================================
    MÓVIL
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 600px) {
-
   .about__container {
     width: 90%;
   }
@@ -430,13 +439,17 @@
     line-height: 0.9;
   }
 
+  /* -------------------------
+     CONTENIDO
+  ------------------------- */
+
   .about__content {
     gap: 3.5rem;
   }
 
   /* -------------------------
      IMAGEN
-     ------------------------- */
+  ------------------------- */
 
   .about__visual {
     width: 100%;
@@ -452,6 +465,23 @@
     aspect-ratio: 4 / 5;
   }
 
+  .about__image {
+    object-position: center;
+  }
+
+  /*
+    En móvil eliminamos el pequeño
+    zoom de hover.
+  */
+
+  .about__visual:hover .about__image {
+    transform: none;
+  }
+
+  /* -------------------------
+     DETALLE DORADO
+  ------------------------- */
+
   .about__gold-detail {
     top: -12px;
     right: -10px;
@@ -462,7 +492,7 @@
 
   /* -------------------------
      EXPERIENCIA
-     ------------------------- */
+  ------------------------- */
 
   .about__experience {
     right: -5px;
@@ -479,18 +509,22 @@
   .about__experience span {
     max-width: 80px;
 
+    margin-top: 0.4rem;
+
     font-size: 0.58rem;
   }
 
   /* -------------------------
      TEXTO
-     ------------------------- */
+  ------------------------- */
 
   .about__text {
     width: 100%;
   }
 
   .about__text p {
+    margin-bottom: 1.35rem;
+
     font-size: 0.9rem;
 
     line-height: 1.75;
@@ -499,19 +533,20 @@
   .about__text .about__lead {
     margin-bottom: 1.5rem;
 
-    font-size: 1.65rem;
+    font-size:
+      clamp(1.55rem, 7vw, 1.8rem);
 
     line-height: 1.25;
   }
 
   /* -------------------------
      FIRMA
-     ------------------------- */
+  ------------------------- */
 
   .about__signature {
-    margin-top: 2.5rem;
+    margin-top: 2.3rem;
 
-    padding-top: 1.3rem;
+    padding-top: 1.25rem;
 
     gap: 1rem;
   }
@@ -525,12 +560,16 @@
   }
 
   .about__signature span {
-    font-size: 0.58rem;
+    font-size: 0.56rem;
+
+    letter-spacing: 0.07em;
+
+    line-height: 1.5;
   }
 
   /* -------------------------
      CREDENCIALES
-     ------------------------- */
+  ------------------------- */
 
   .about__credentials {
     grid-template-columns: 1fr;
@@ -575,15 +614,33 @@
 
 /* =========================================================
    MÓVIL PEQUEÑO
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 380px) {
-
   .about__title {
     font-size: 2.8rem;
   }
 
+  .about__content {
+    gap: 2.5rem;
+  }
+
+  .about__visual {
+    max-width: 330px;
+  }
+
+  .about__gold-detail {
+    top: -10px;
+    right: -8px;
+
+    width: 58px;
+    height: 58px;
+  }
+
   .about__experience {
+    right: -3px;
+    bottom: 15px;
+
     width: 105px;
     height: 105px;
   }
@@ -593,10 +650,30 @@
   }
 
   .about__experience span {
+    max-width: 70px;
+
     font-size: 0.52rem;
   }
 
   .about__text .about__lead {
     font-size: 1.5rem;
+  }
+
+  .about__text p {
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+  }
+
+  .about__signature {
+    margin-top: 2rem;
+  }
+
+  .about__signature strong {
+    font-size: 0.95rem;
+  }
+
+  .about__signature span {
+    font-size: 0.52rem;
   }
 }

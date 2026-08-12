@@ -79,16 +79,13 @@ function FAQ() {
         <div className="faq__list">
 
           {questions.map((item, index) => {
-
-            const isOpen =
-              activeIndex === index;
+            const isOpen = activeIndex === index;
+            const answerId = `faq-answer-${index}`;
 
             return (
               <div
                 className={`faq__item ${
-                  isOpen
-                    ? "faq__item--open"
-                    : ""
+                  isOpen ? "faq__item--open" : ""
                 }`}
                 key={item.question}
               >
@@ -96,10 +93,9 @@ function FAQ() {
                 <button
                   type="button"
                   className="faq__question"
-                  onClick={() =>
-                    toggleQuestion(index)
-                  }
+                  onClick={() => toggleQuestion(index)}
                   aria-expanded={isOpen}
+                  aria-controls={answerId}
                 >
 
                   <span className="faq__number">
@@ -120,6 +116,7 @@ function FAQ() {
                 </button>
 
                 <div
+                  id={answerId}
                   className="faq__answer"
                   aria-hidden={!isOpen}
                 >
@@ -138,7 +135,6 @@ function FAQ() {
         <div className="faq__footer">
 
           <div>
-
             <span className="faq__footer-label">
               ¿No encuentras lo que buscas?
             </span>
@@ -146,7 +142,6 @@ function FAQ() {
             <h3>
               Puedes preguntarme directamente.
             </h3>
-
           </div>
 
           <a

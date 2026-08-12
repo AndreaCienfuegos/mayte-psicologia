@@ -10,7 +10,7 @@ const locations = [
     description:
       "Actualmente puedes encontrar a Mayte en este centro sanitario multidisciplinar de Alcorcón.",
     mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=Centro+Sanitario+Salud+M%C3%A9todo+Avanzado+Av.+Cantarranas+Alcorc%C3%B3n",
+      "https://www.google.com/maps/search/?api=1&query=Centro+Sanitario+Salud+Método+Avanzado+Av.+Cantarranas+Alcorcón",
   },
   {
     number: "02",
@@ -21,21 +21,17 @@ const locations = [
     description:
       "Actualmente puedes encontrar a Mayte en este centro sanitario de Carabanchel.",
     mapUrl:
-      "https://www.google.com/maps/place/C.+V%C3%ADa+Carpetana,+201,+Carabanchel,+28047+Madrid",
+      "https://www.google.com/maps/search/?api=1&query=Centro+Médico+Vía+Carpetana+201+Madrid",
   },
 ];
 
 function Locations() {
   return (
-    <section
-      className="locations section"
-      id="consulta"
-    >
+    <section className="locations section" id="consulta">
       <div className="locations__container">
 
         {/* CABECERA */}
         <div className="locations__header">
-
           <div className="section-label">
             <span className="gold-line"></span>
             Dónde encontrarme
@@ -51,12 +47,10 @@ function Locations() {
             de consulta en la Comunidad de Madrid, donde trabajo
             de forma cercana e individualizada con cada persona.
           </p>
-
         </div>
 
         {/* UBICACIONES */}
         <div className="locations__grid">
-
           {locations.map((location) => (
             <article
               className="location-card"
@@ -65,7 +59,6 @@ function Locations() {
 
               {/* PARTE SUPERIOR */}
               <div className="location-card__top">
-
                 <span className="location-card__number">
                   {location.number}
                 </span>
@@ -73,12 +66,10 @@ function Locations() {
                 <span className="location-card__city">
                   {location.city}
                 </span>
-
               </div>
 
               {/* CONTENIDO */}
               <div className="location-card__content">
-
                 <div className="location-card__pin">
                   ⌖
                 </div>
@@ -105,7 +96,6 @@ function Locations() {
                 <p className="location-card__description">
                   {location.description}
                 </p>
-
               </div>
 
               {/* MAPA */}
@@ -121,14 +111,11 @@ function Locations() {
 
             </article>
           ))}
-
         </div>
 
         {/* CTA */}
         <div className="locations__cta">
-
           <div>
-
             <span className="locations__cta-label">
               ¿Tienes dudas?
             </span>
@@ -136,7 +123,6 @@ function Locations() {
             <h3>
               Estoy aquí para ayudarte.
             </h3>
-
           </div>
 
           <a
@@ -146,7 +132,6 @@ function Locations() {
             Solicitar una cita
             <span>→</span>
           </a>
-
         </div>
 
       </div>

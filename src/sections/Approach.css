@@ -86,7 +86,7 @@
   display: grid;
 
   grid-template-columns:
-    100px
+    80px
     1fr
     50px;
 
@@ -123,7 +123,8 @@
   width: 110%;
   height: 100%;
 
-  background: var(--color-forest);
+  background:
+    var(--color-forest);
 
   transform:
     scaleY(0);
@@ -131,13 +132,15 @@
   transform-origin: bottom;
 
   transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    transform 0.45s
+    cubic-bezier(0.22, 1, 0.36, 1);
 
   z-index: 0;
 }
 
 .approach__step:hover {
   padding-left: 1.5rem;
+
   padding-right: 1.5rem;
 }
 
@@ -184,7 +187,9 @@
 }
 
 .approach__step-content h3 {
-  margin: 0 0 0.7rem;
+  margin:
+    0
+    0.7rem;
 
   color: var(--color-forest);
 
@@ -269,7 +274,10 @@
 
   max-width: 800px;
 
-  margin: 6rem auto 0;
+  margin:
+    6rem
+    auto
+    0;
 
   text-align: center;
 }
@@ -354,9 +362,9 @@
     line-height: 1.75;
   }
 
-  /* -------------------------
+  /* ---------------------------------------------------------
      PASOS
-     ------------------------- */
+     --------------------------------------------------------- */
 
   .approach__step {
     grid-template-columns:
@@ -373,12 +381,13 @@
   }
 
   /*
-   * En móvil no desplazamos el contenido
-   * al hacer/tocar hover.
+   * En móvil eliminamos el efecto hover.
+   * El contenido permanece estable al tocar la pantalla.
    */
 
   .approach__step:hover {
     padding-left: 0;
+
     padding-right: 0;
   }
 
@@ -422,6 +431,11 @@
     line-height: 1.7;
   }
 
+  /*
+   * Evitamos que el hover de escritorio
+   * deje colores incorrectos en móvil.
+   */
+
   .approach__step:hover
   .approach__step-content h3 {
     color: var(--color-forest);
@@ -432,9 +446,9 @@
     color: var(--color-text-soft);
   }
 
-  /* -------------------------
+  /* ---------------------------------------------------------
      CIERRE
-     ------------------------- */
+     --------------------------------------------------------- */
 
   .approach__closing {
     flex-direction: column;
@@ -495,5 +509,21 @@
 
   .approach__closing p {
     font-size: 1.35rem;
+  }
+}
+
+/* =========================================================
+   REDUCIR ANIMACIONES
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .approach__step,
+  .approach__step::before,
+  .approach__step-number,
+  .approach__step-content h3,
+  .approach__step-content p,
+  .approach__step-arrow {
+    transition: none;
   }
 }

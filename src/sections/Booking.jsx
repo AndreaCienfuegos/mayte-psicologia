@@ -36,7 +36,7 @@ function Booking() {
 
             <p className="booking__text">
               Cuéntame brevemente qué necesitas y encontraremos
-              juntas la mejor forma de empezar.
+              juntos la mejor forma de empezar.
             </p>
 
             <div className="booking__note">

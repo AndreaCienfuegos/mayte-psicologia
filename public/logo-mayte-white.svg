@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Mayte Cacharrón — Psicóloga sanitaria · Logopeda</title>
+  <desc>Versión negativa del logotipo horizontal para fondos oscuros.</desc>
+
+  <!-- Arco dorado -->
+  <path d="M50 147C50 86.2 99.2 37 160 37C188.2 37 214.3 47.6 234.1 65.4"
+        stroke="#C6A66B" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Monograma -->
+  <text x="80" y="180"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="112"
+        letter-spacing="-12"
+        fill="#F8F5EF">M</text>
+
+  <text x="137" y="196"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="92"
+        letter-spacing="-10"
+        fill="#C6A66B">C</text>
+
+  <!-- Detalle botánico -->
+  <path d="M200 198C217 171 231 145 237 117"
+        stroke="#8FA99B" stroke-width="3" stroke-linecap="round"/>
+
+  <path d="M212 176C205 163 204 148 210 136C220 143 224 156 212 176Z"
+        fill="#8FA99B"/>
+  <path d="M223 157C220 141 225 127 237 119C242 134 237 147 223 157Z"
+        fill="#8FA99B"/>
+  <path d="M231 138C232 123 241 111 254 107C254 122 246 132 231 138Z"
+        fill="#8FA99B"/>
+
+  <!-- Puntos -->
+  <circle cx="238" cy="77" r="5" fill="#C6A66B"/>
+  <circle cx="256" cy="92" r="4" fill="#C6A66B"/>
+
+  <!-- Separador -->
+  <line x1="280" y1="58" x2="280" y2="205" stroke="#C6A66B" stroke-width="2"/>
+
+  <!-- Nombre -->
+  <text x="325" y="116"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="78"
+        fill="#F8F5EF">Mayte</text>
+
+  <text x="328" y="163"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="33"
+        font-weight="500"
+        letter-spacing="11"
+        fill="#F8F5EF">CACHARRÓN</text>
+
+  <!-- Línea dorada -->
+  <line x1="328" y1="183" x2="480" y2="183" stroke="#C6A66B" stroke-width="2"/>
+
+  <!-- Descriptor -->
+  <text x="328" y="219"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="16"
+        font-weight="600"
+        letter-spacing="3.5"
+        fill="#F8F5EF">PSICÓLOGA SANITARIA · LOGOPEDA</text>
+</svg>

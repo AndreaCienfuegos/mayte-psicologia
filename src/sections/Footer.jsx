@@ -1,33 +1,55 @@
 import "./Footer.css";
 
 function Footer() {
-  const currentYear = new Date().getFullYear();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <footer className="footer">
-
       <div className="footer__container">
 
         {/* =====================================================
             PARTE PRINCIPAL
-            ===================================================== */}
+        ===================================================== */}
 
         <div className="footer__main">
 
           {/* MARCA */}
+
           <div className="footer__brand">
 
             <a
-              href="/"
+              href={import.meta.env.BASE_URL}
               className="footer__logo"
+              aria-label="Mayte Cacharrón — Inicio"
             >
-              Mayte
-              <span>Cacharrón</span>
-            </a>
+              <img
+                src={`${import.meta.env.BASE_URL}logo-mark-white.svg`}
+                alt=""
+                className="footer__mark"
+                aria-hidden="true"
+              />
 
-            <p className="footer__profession">
-              Psicóloga Sanitaria · Logopeda
-            </p>
+              <span className="footer__brand-text">
+
+                <span className="footer__name">
+                  Mayte
+                </span>
+
+                <span className="footer__surname">
+                  CACHARRÓN
+                </span>
+
+                <span className="footer__descriptor">
+                  PSICÓLOGA SANITARIA · MÁSTER EN LOGOPEDIA
+                </span>
+
+              </span>
+            </a>
 
             <p className="footer__tagline">
               Un espacio para comprenderte,
@@ -36,55 +58,62 @@ function Footer() {
 
           </div>
 
-
           {/* NAVEGACIÓN */}
+
           <div className="footer__column">
 
-            <span className="footer__column-title">
-              Explorar
-            </span>
+            <h3 className="footer__column-title">
+              Navegación
+            </h3>
 
             <nav className="footer__nav">
 
-              <a href="/#inicio">
+              <a href="#inicio">
                 Inicio
               </a>
 
-              <a href="/#sobre-mi">
-                Sobre Mayte
+              <a href="#sobre-mi">
+                Sobre mí
               </a>
 
-              <a href="/#especialidades">
+              <a href="#especialidades">
                 Especialidades
               </a>
 
-              <a href="/#como-trabajo">
+              <a href="#como-trabajo">
                 Cómo trabajo
               </a>
 
-              <a href="/#consulta">
+              <a href="#consulta">
                 Dónde encontrarme
               </a>
 
-              <a href="/#preguntas">
+              <a href="#preguntas">
                 Preguntas frecuentes
+              </a>
+
+              <a href="#contacto">
+                Contacto
               </a>
 
             </nav>
 
           </div>
 
-
           {/* CONTACTO */}
+
           <div className="footer__column">
 
-            <span className="footer__column-title">
+            <h3 className="footer__column-title">
               Contacto
-            </span>
+            </h3>
 
             <div className="footer__contact">
 
-              <a href="tel:+34629221532">
+              <a
+                href="tel:+34629221532"
+                aria-label="Llamar al 629 22 15 32"
+              >
                 629 22 15 32
               </a>
 
@@ -93,7 +122,7 @@ function Footer() {
               </span>
 
               <a
-                href="/#citas"
+                href="#citas"
                 className="footer__contact-link"
               >
                 Solicitar una cita
@@ -106,58 +135,61 @@ function Footer() {
 
         </div>
 
-
-        {/* =====================================================
-            FRASE CENTRAL
-            ===================================================== */}
+        {/* FRASE CENTRAL */}
 
         <div className="footer__statement">
 
-          <span className="footer__statement-mark">
+          <span
+            className="footer__statement-mark"
+            aria-hidden="true"
+          >
             ✦
           </span>
 
           <p>
-            A veces, dar el primer paso
-            <span>
-              empieza simplemente por hablar.
-            </span>
+            Un acompañamiento cercano para
+            <span>volver a ti.</span>
           </p>
 
         </div>
 
-
-        {/* =====================================================
-            PARTE INFERIOR
-            ===================================================== */}
+        {/* PARTE INFERIOR */}
 
         <div className="footer__bottom">
 
-          <div className="footer__copyright">
-            © {currentYear} Mayte Cacharrón.
+          <p className="footer__copyright">
+            © {new Date().getFullYear()} Mayte Cacharrón.
             Todos los derechos reservados.
-          </div>
+          </p>
 
           <div className="footer__legal">
 
-            <a href="/aviso-legal">
+            <a href="#aviso-legal">
               Aviso legal
             </a>
 
-            <a href="/privacidad">
+            <a href="#privacidad">
               Privacidad
             </a>
 
-            <a href="/cookies">
+            <a href="#cookies">
               Cookies
             </a>
 
           </div>
 
+          <button
+            type="button"
+            className="footer__top"
+            onClick={scrollToTop}
+            aria-label="Volver arriba"
+          >
+            ↑
+          </button>
+
         </div>
 
       </div>
-
     </footer>
   );
 }

@@ -55,7 +55,8 @@ function About() {
           <div className="about__text">
 
             <p className="about__lead">
-              Soy Mayte Cacharrón, psicóloga sanitaria y logopeda.
+              Soy Mayte Cacharrón, psicóloga sanitaria y cuento con
+              un Máster en Logopedia.
             </p>
 
             <p>
@@ -82,7 +83,7 @@ function About() {
                 </strong>
 
                 <span>
-                  Psicóloga sanitaria · Logopeda
+                  Psicóloga sanitaria · Máster en Logopedia
                 </span>
               </div>
 
@@ -117,11 +118,11 @@ function About() {
 
             <div>
               <strong>
-                Logopeda
+                Máster en Logopedia
               </strong>
 
               <p>
-                Evaluación e intervención logopédica.
+                Formación especializada en el ámbito de la comunicación y el lenguaje.
               </p>
             </div>
 

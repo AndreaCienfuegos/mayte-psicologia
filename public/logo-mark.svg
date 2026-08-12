@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <title>Mayte Cacharrón — símbolo MC</title>
+  <desc>Monograma MC con arco dorado y detalle botánico en verde salvia.</desc>
+
+  <!-- Arco dorado -->
+  <path
+    d="M48 166C48 96.4 104.4 40 174 40C207.1 40 237.8 52.4 261 73"
+    stroke="#C6A66B"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <!-- Monograma -->
+  <text
+    x="78"
+    y="203"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="150"
+    letter-spacing="-16"
+    fill="#23443A"
+  >M</text>
+
+  <text
+    x="151"
+    y="218"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="124"
+    letter-spacing="-14"
+    fill="#C6A66B"
+  >C</text>
+
+  <!-- Tallo -->
+  <path
+    d="M218 240C242 207 262 169 270 127"
+    stroke="#8FA99B"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <!-- Hojas -->
+  <path
+    d="M235 215C224 195 225 178 233 165C248 175 252 192 235 215Z"
+    fill="#8FA99B"
+  />
+  <path
+    d="M249 187C246 165 253 146 269 136C276 156 268 174 249 187Z"
+    fill="#8FA99B"
+  />
+  <path
+    d="M261 160C262 141 274 126 290 121C289 139 279 153 261 160Z"
+    fill="#8FA99B"
+  />
+
+  <!-- Puntos decorativos -->
+  <circle cx="265" cy="82" r="7" fill="#C6A66B"/>
+  <circle cx="286" cy="100" r="5.5" fill="#C6A66B"/>
+</svg>

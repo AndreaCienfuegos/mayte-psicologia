@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="820" height="150" viewBox="0 0 820 150" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <title>Mayte Cacharrón</title>
+
+  <!-- Símbolo compacto -->
+  <g transform="translate(8 12)">
+    <path d="M20 67C20 34 47 7 80 7C96 7 111 13 122 23"
+          stroke="#C6A66B" stroke-width="2.8" stroke-linecap="round"/>
+
+    <text x="25" y="95"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="82"
+          letter-spacing="-9"
+          fill="#23443A">M</text>
+
+    <text x="65" y="105"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="67"
+          letter-spacing="-8"
+          fill="#C6A66B">C</text>
+
+    <path d="M105 116C119 96 129 75 133 52"
+          stroke="#8FA99B" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M113 103C108 93 109 84 114 77C121 82 122 92 113 103Z"
+          fill="#8FA99B"/>
+    <path d="M121 85C119 74 124 65 133 59C137 69 132 78 121 85Z"
+          fill="#8FA99B"/>
+    <path d="M128 68C129 59 136 51 145 48C145 57 139 65 128 68Z"
+          fill="#8FA99B"/>
+
+    <circle cx="133" cy="30" r="3.5" fill="#C6A66B"/>
+    <circle cx="145" cy="39" r="3" fill="#C6A66B"/>
+  </g>
+
+  <!-- Separador -->
+  <line x1="168" y1="20" x2="168" y2="130"
+        stroke="#C6A66B" stroke-width="1.6"/>
+
+  <!-- Nombre -->
+  <text x="202" y="72"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="64"
+        fill="#23443A">Mayte</text>
+
+  <text x="205" y="108"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="29"
+        font-weight="600"
+        letter-spacing="8.5"
+        fill="#23443A">CACHARRÓN</text>
+
+  <!-- Descriptor -->
+  <text x="205" y="132"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="11.5"
+        font-weight="600"
+        letter-spacing="2.2"
+        fill="#23443A">PSICÓLOGA SANITARIA · LOGOPEDA</text>
+</svg>

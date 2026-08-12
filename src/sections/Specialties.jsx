@@ -33,9 +33,9 @@ const specialties = [
   },
   {
     number: "06",
-    title: "Logopedia",
+    title: "Formación en Logopedia",
     description:
-      "Intervención logopédica desde un enfoque individualizado y coordinado con otras áreas profesionales cuando es necesario.",
+      "Formación especializada a través de un Máster en Logopedia, como complemento a su trayectoria profesional.",
   },
 ];
 
@@ -48,6 +48,7 @@ function Specialties() {
       <div className="specialties__container">
 
         {/* CABECERA */}
+
         <div className="specialties__header">
 
           <div className="section-label">
@@ -70,6 +71,7 @@ function Specialties() {
         </div>
 
         {/* TARJETAS */}
+
         <div className="specialties__grid">
 
           {specialties.map((specialty) => (
@@ -110,6 +112,7 @@ function Specialties() {
         </div>
 
         {/* CIERRE */}
+
         <div className="specialties__footer">
 
           <p>

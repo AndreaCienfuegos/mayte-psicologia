@@ -16,7 +16,7 @@ const locations = [
     number: "02",
     city: "Madrid",
     name: "Centro Médico Vía Carpetana",
-    address: "C. Vía Carpetana, 201",
+    address: "C. Manuel Álvarez, 3",
     postalCode: "28047 Madrid",
     description:
       "Actualmente puedes encontrar a Mayte en este centro sanitario de Carabanchel.",
